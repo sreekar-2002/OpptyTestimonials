@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials Slider</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 4.7 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #1e1f26, #23252f);
+    color:white;
+}
+
+/* ===== SECTION ===== */
+.section{
+    padding:70px 80px;
+    text-align:center;
+}
+
+.small-title{
+    font-size:14px;
+    color:#bfbfbf;
+}
+
+.main-title{
+    font-size:42px;
+    font-weight:700;
+    margin:15px 0 60px;
+}
+
+.orange{
+    color:#ff7a00;
+}
+
+/* ===== SLIDER ===== */
+.slider{
+    overflow:hidden;
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+}
+
+.slides{
+    display:flex;
+    transition:0.6s ease-in-out;
+}
+
+/* ===== CARD ===== */
+.card{
+    min-width:33.33%;
+    padding:20px;
+}
+
+.card-inner{
+    background:#1f2129;
+    padding:30px;
+    border-radius:10px;
+    text-align:left;
+    border:1px solid rgba(0,132,255,0.2);
+    box-shadow:0 0 20px rgba(0,132,255,0.08);
+    position:relative;
+}
+
+.card-inner h4{
+    margin-bottom:8px;
+}
+
+/* Stars */
+.checked{
+    color:#ff7a00;
+}
+
+/* Review text */
+.card-inner p{
+    margin-top:15px;
+    color:#dcdcdc;
+    line-height:1.6;
+}
+
+/* Big Quote */
+.card-inner::after {
+    content: "\201D";
+    position: absolute;
+    font-size: 150px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    color: rgba(255,255,255,0.03);
+    right: 20px;
+    bottom: -45px;
+}
+
+/* ===== DOTS ===== */
+.dots{
+    margin-top:30px;
+}
+
+.dot{
+    height:8px;
+    width:8px;
+    margin:0 5px;
+    background:#aaa;
+    border-radius:50%;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.active{
+    background:white;
+}
+
+/* Bottom text */
+.partner{
+    color:#bfbfbf;
+    margin:30px 0 10px;
+}
+
+.bottom-title{
+    font-size:40px;
+    font-weight:700;
+}
+
+</style>
+</head>
+<body>
+
+<section class="section">
+
+<div class="small-title">Testimonials</div>
+<div class="main-title">
+    OUR CLIENTS <span class="orange">REVIEWS</span>
+</div>
+
+<div class="slider">
+    <div class="slides" id="slideContainer">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Oppty's e-commerce platform increased our online 
+                    sales by 45% in just three months!
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Tech Entrepreneur</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Their AI-driven solutions optimized our workflows, 
+                    saving us significant costs.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Marketing Head</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    The responsive website Oppty built for us perfectly 
+                    captures our brand's essence.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Oppty's e-commerce platform increased our online 
+                    sales by 45% in just three months!
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Tech Entrepreneur</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Their AI-driven solutions optimized our workflows, 
+                    saving us significant costs.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Marketing Head</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    The responsive website Oppty built for us perfectly 
+                    captures our brand's essence.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Oppty's e-commerce platform increased our online 
+                    sales by 45% in just three months!
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Tech Entrepreneur</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Their AI-driven solutions optimized our workflows, 
+                    saving us significant costs.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 9 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Marketing Head</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    The responsive website Oppty built for us perfectly 
+                    captures our brand's essence.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 10 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Oppty's e-commerce platform increased our online 
+                    sales by 45% in just three months!
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 11 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Tech Entrepreneur</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    Their AI-driven solutions optimized our workflows, 
+                    saving us significant costs.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 12 -->
+        <div class="card">
+            <div class="card-inner">
+                <h4>Sreekar Reddy, Marketing Head</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>
+                    The responsive website Oppty built for us perfectly 
+                    captures our brand's essence.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- DOTS -->
+<div class="dots">
+    <span class="dot active" onclick="moveSlide(0)"></span>
+    <span class="dot" onclick="moveSlide(1)"></span>
+    <span class="dot" onclick="moveSlide(2)"></span>
+    <span class="dot" onclick="moveSlide(3)"></span>
+</div>
+
+<div class="partner">
+    We are proud to partner with industry leaders.
+</div>
+
+<div class="bottom-title">
+    OUR VALUED <span class="orange">CLIENTS</span>
+</div>
+
+</section>
+
+<script>
+
+let index = 0;
+const slides = document.getElementById("slideContainer");
+const dots = document.querySelectorAll(".dot");
+
+function moveSlide(i){
+    index = i;
+    slides.style.transform = "translateX(-" + (index * 100) + "%)";
+    updateDots();
+}
+
+function updateDots(){
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+}
+
+/* Auto Slide */
+setInterval(()=>{
+    index++;
+    if(index > 2) index = 0;
+    moveSlide(index);
+}, 3000);
+
+</script>
+
+</body>
+</html>
