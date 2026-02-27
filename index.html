@@ -73,6 +73,14 @@ body{
     border:1px solid rgba(0,132,255,0.2);
     box-shadow:0 0 20px rgba(0,132,255,0.08);
     position:relative;
+    transition: all 0.4s ease;
+}
+
+/* ===== CARD HOVER EFFECT ===== */
+.card-inner:hover {
+    transform: translateY(-12px);
+    border: 1px solid rgba(0,132,255,0.6);
+    box-shadow: 0 0 25px rgba(0,132,255,0.3);
 }
 
 .card-inner h4{
@@ -132,6 +140,7 @@ body{
     font-size:40px;
     font-weight:700;
 }
+
 
 </style>
 </head>
@@ -377,7 +386,9 @@ body{
 let index = 0;
 const slides = document.getElementById("slideContainer");
 const dots = document.querySelectorAll(".dot");
+let autoSlide;
 
+/* Move Slide */
 function moveSlide(i){
     index = i;
     slides.style.transform = "translateX(-" + (index * 100) + "%)";
@@ -389,12 +400,28 @@ function updateDots(){
     dots[index].classList.add("active");
 }
 
-/* Auto Slide */
-setInterval(()=>{
-    index++;
-    if(index > 2) index = 0;
-    moveSlide(index);
-}, 3000);
+/* Start Auto Slide */
+function startSlide(){
+    autoSlide = setInterval(()=>{
+        index++;
+        if(index > 3) index = 0;  // adjust according to dots count
+        moveSlide(index);
+    }, 3000);
+}
+
+/* Stop Auto Slide */
+function stopSlide(){
+    clearInterval(autoSlide);
+}
+
+/* Start initially */
+startSlide();
+
+/* Pause when hovering slider */
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("mouseenter", stopSlide);
+slider.addEventListener("mouseleave", startSlide);
 
 </script>
 
